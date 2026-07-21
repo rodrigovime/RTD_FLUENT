@@ -1,0 +1,43 @@
+/file/read-case "case/dpm.cas.h5"
+/solve/initialize/hyb-initialization
+/solve/set/time-step
+0.02
+/solve/dual-time-iterate 100 1
+yes
+/define/models/dpm/unsteady-tracking yes yes
+/define/models/dpm/numerics/tracking-parameters 5000 no 5
+/define/models/dpm/numerics/error-control? no
+/define/models/dpm/numerics/tracking-scheme analytic
+/define/injections/create-injection
+rtd-inlet
+no
+yes
+surface
+no
+inlet
+()
+no
+no
+no
+no
+no
+no
+no
+no
+-1
+0
+0
+1e-6
+2.00
+2.02
+1e-12
+/report/dpm-sample
+rtd-inlet
+()
+outlet
+()
+()
+no
+/solve/dual-time-iterate 250 1
+/report/dpm-summary
+/exit yes

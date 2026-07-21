@@ -1,0 +1,15 @@
+Fluent 2023 R2 transient DPM summary
+escaped_parcels: 228
+residence_time_min_s: 0.7277
+residence_time_max_s: 1.353
+residence_time_mean_s: 0.8677
+residence_time_std_s: 0.1813
+injected_mass_kg: 2e-14
+escaped_mass_kg: 2e-14
+
+RTD artifact note:
+Fluent's transient DPM run reported all outlet escapes, but the batch
+DPM sample file remained header-only. The RTD CSV/PNG/GIF are fitted
+from the summary using a bounded beta distribution.
+beta_alpha: 0.23889572
+beta_beta: 0.82811495
