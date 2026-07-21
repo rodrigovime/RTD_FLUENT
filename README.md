@@ -4,13 +4,6 @@ This repository contains a minimal ANSYS Fluent workflow for obtaining a
 residence time distribution (RTD) curve from a discrete phase model (DPM)
 tracer pulse in a straight pipe.
 
-The case is intentionally small and publishable:
-
-- one Fluent case file
-- one Fluent 2023 R2 batch journal
-- Python tools for RTD postprocessing and example figures
-- an optional DPM output UDF for raw particle sampling
-- example output artifacts from the current run
 
 ## Repository Layout
 
@@ -323,14 +316,3 @@ The raw-sample converter writes:
 - `E_1_per_s`: normalized RTD density
 - `F`: cumulative RTD
 - `bin_weight`: parcel, mass, or row-count weight in the bin
-
-## Notes For Publishing
-
-- `.gitignore` excludes Fluent transcripts, cleanup scripts, temporary sample
-  files, Python caches, and compiled UDF output.
-- `.gitattributes` marks Fluent case files and image outputs as binary.
-- Add a `LICENSE` file before public release if you want others to reuse the
-  case or scripts under explicit terms.
-- If you rerun the case and get different DPM summary values, pass the updated
-  values to `tools/make_rtd_summary_artifacts.py` with `--mean-s`, `--std-s`,
-  `--min-s`, `--max-s`, and related options.
